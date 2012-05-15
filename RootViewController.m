@@ -29,6 +29,44 @@
 #pragma mark -
 #pragma mark View lifecycle
 
+- (void)viewDidLoad {
+	[super viewDidLoad];
+	[spinner startAnimating];
+	
+	[NSThread detachNewThreadSelector:@selector(parse) toTarget:self withObject:nil]; 
+
+	isSearching = NO;
+	maySelectRow = YES;
+			
+	self.navigationController.navigationBarHidden = YES;
+	
+	self.navigationItem.title = @"Back";
+	
+    [[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(keyboardWillShow:)
+												 name:UIKeyboardWillShowNotification
+											   object:nil];
+	
+    [[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(keyboardWillHide:)
+												 name:UIKeyboardWillHideNotification
+											   object:nil];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+	[super viewWillAppear:animated];
+	[self.navigationController setNavigationBarHidden:YES animated:YES];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+	[super viewDidAppear:animated];
+	
+	for(UIGestureRecognizer *recognizer in self.navigationController.navigationBar.gestureRecognizers) {
+		recognizer.enabled = YES;
+	}
+}
+
+#pragma mark -
 - (void)buildIndex {
 	//TODO build dynamically
 	NSMutableArray *tempArray = [[NSMutableArray alloc] init];
@@ -62,7 +100,7 @@
 		entries = [parser parse:[[NSBundle mainBundle] pathForResource:@"bb-codes" ofType:@"txt"]];
 		
 		[self buildIndex];
-			
+        
 		[self.tableView reloadData];
 		
 		[spinner stopAnimating];
@@ -76,32 +114,8 @@
 		}
 		
 		NSLog(@"Finished parsing.");
-	
+        
 	}
-}
-
-- (void)viewDidLoad {
-	[super viewDidLoad];
-	[spinner startAnimating];
-	
-	[NSThread detachNewThreadSelector:@selector(parse) toTarget:self withObject:nil]; 
-
-	isSearching = NO;
-	maySelectRow = YES;
-			
-	self.navigationController.navigationBarHidden = YES;
-	
-	self.navigationItem.title = @"Back";
-	
-    [[NSNotificationCenter defaultCenter] addObserver:self
-											 selector:@selector(keyboardWillShow:)
-												 name:UIKeyboardWillShowNotification
-											   object:nil];
-	
-    [[NSNotificationCenter defaultCenter] addObserver:self
-											 selector:@selector(keyboardWillHide:)
-												 name:UIKeyboardWillHideNotification
-											   object:nil];
 }
 
 - (void)keyboardWillShow:(NSNotification *)notification {
@@ -148,14 +162,6 @@
     self.tableView.frame = frame;
 	
     [UIView commitAnimations];
-}
-
-
-
-
-- (IBAction)info:(id)sender {
-	InfoViewController *infoViewController = [[InfoViewController alloc] initWithNibName:@"InfoViewController" bundle:nil];
-	[self presentModalViewController:infoViewController animated:YES];
 }
 
 - (NSRange)searchInTranslation:(NSString *)translation searchFor:(NSString *)searchText {
@@ -208,20 +214,12 @@
 	}
 }
 
+#pragma mark -
+#pragma mark IBActions
 
-
-- (void)viewWillAppear:(BOOL)animated {
-	[super viewWillAppear:animated];
-	[self.navigationController setNavigationBarHidden:YES animated:YES];
-}
- 
-
-- (void)viewDidAppear:(BOOL)animated {
-	[super viewDidAppear:animated];
-	
-	for(UIGestureRecognizer *recognizer in self.navigationController.navigationBar.gestureRecognizers) {
-		recognizer.enabled = YES;
-	}
+- (IBAction)info:(id)sender {
+	InfoViewController *infoViewController = [[InfoViewController alloc] initWithNibName:@"InfoViewController" bundle:nil];
+	[self presentModalViewController:infoViewController animated:YES];
 }
 
 #pragma mark -
@@ -288,8 +286,6 @@
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-	
 	DetailViewController *detailViewController = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
 	WordEntry *entry = nil;
 	
@@ -312,7 +308,6 @@
 }
 
 - (NSIndexPath *)tableView :(UITableView *)theTableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	
 	if(maySelectRow) {
 		return indexPath;
 	}
@@ -325,7 +320,6 @@
 #pragma mark UISearchBarDelegate
 
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)theSearchBar {
-
 	isSearching = YES;
 	maySelectRow = NO;
 	self.tableView.scrollEnabled = NO;

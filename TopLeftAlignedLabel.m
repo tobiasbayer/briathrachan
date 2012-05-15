@@ -18,7 +18,7 @@
 
 @implementation TopLeftAlignedLabel
 
--(void) drawTextInRect:(CGRect)inFrame {
+- (void) drawTextInRect:(CGRect)inFrame {
     CGRect draw = [self textRectForBounds:inFrame limitedToNumberOfLines:[self numberOfLines]];
     draw.origin = CGPointZero;
     [super drawTextInRect:draw];

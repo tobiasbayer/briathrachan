@@ -79,7 +79,6 @@
 	}
 	
 	return entryDict;
-	
 }
 
 @end
