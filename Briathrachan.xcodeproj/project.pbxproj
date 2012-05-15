@@ -10,24 +10,24 @@
 		5DEA98F51562D6A600F7AA40 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DEA98F41562D6A600F7AA40 /* UIKit.framework */; };
 		5DEA98F71562D6A600F7AA40 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DEA98F61562D6A600F7AA40 /* Foundation.framework */; };
 		5DEA98F91562D6A600F7AA40 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DEA98F81562D6A600F7AA40 /* CoreGraphics.framework */; };
-		5DEA98FF1562D6A600F7AA40 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5DEA98FD1562D6A600F7AA40 /* InfoPlist.strings */; };
-		5DEA99011562D6A600F7AA40 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DEA99001562D6A600F7AA40 /* main.m */; };
 		5DEA99101562D6F500F7AA40 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DEA990C1562D6F500F7AA40 /* RootViewController.xib */; };
 		5DEA99111562D6F500F7AA40 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DEA990D1562D6F500F7AA40 /* MainWindow.xib */; };
 		5DEA99121562D6F500F7AA40 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DEA990E1562D6F500F7AA40 /* DetailViewController.xib */; };
 		5DEA99131562D6F500F7AA40 /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DEA990F1562D6F500F7AA40 /* InfoViewController.xib */; };
 		5DEA99241562D75B00F7AA40 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DEA99231562D75B00F7AA40 /* MessageUI.framework */; };
-		5DEA99271562D79400F7AA40 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DEA99251562D79400F7AA40 /* Icon.png */; };
-		5DEA99281562D79400F7AA40 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DEA99261562D79400F7AA40 /* Default.png */; };
 		5DEA992C1562D7FB00F7AA40 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DEA99161562D71100F7AA40 /* InfoViewController.m */; };
 		5DEA992E1562D7FB00F7AA40 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DEA99181562D71100F7AA40 /* DetailViewController.m */; };
 		5DEA99301562D7FB00F7AA40 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DEA991A1562D71100F7AA40 /* RootViewController.m */; };
 		5DEA99341562D7FB00F7AA40 /* WordEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DEA991E1562D71100F7AA40 /* WordEntry.m */; };
 		5DEA99361562D7FB00F7AA40 /* BBParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DEA99201562D71100F7AA40 /* BBParser.m */; };
 		5DEA99381562D7FB00F7AA40 /* TopLeftAlignedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DEA99221562D71100F7AA40 /* TopLeftAlignedLabel.m */; };
-		5DEA993A1562D80500F7AA40 /* BriathrachanAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DEA992A1562D7EE00F7AA40 /* BriathrachanAppDelegate.m */; };
-		5DEA993C1562D86200F7AA40 /* bb-codes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5DEA993B1562D86200F7AA40 /* bb-codes.txt */; };
-		5DEA993E1562E8A300F7AA40 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5DEA993D1562E8A300F7AA40 /* README.md */; };
+		5DEA99431562EA7500F7AA40 /* BriathrachanAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DEA99411562EA7500F7AA40 /* BriathrachanAppDelegate.m */; };
+		5DEA99441562EA7500F7AA40 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DEA99421562EA7500F7AA40 /* main.m */; };
+		5DEA99481562EA8F00F7AA40 /* bb-codes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5DEA99451562EA8F00F7AA40 /* bb-codes.txt */; };
+		5DEA99491562EA8F00F7AA40 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DEA99461562EA8F00F7AA40 /* Default.png */; };
+		5DEA994A1562EA8F00F7AA40 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DEA99471562EA8F00F7AA40 /* Icon.png */; };
+		5DEA994D1562EAB300F7AA40 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5DEA994B1562EAB300F7AA40 /* InfoPlist.strings */; };
+		5DEA994F1562EABF00F7AA40 /* Briathrachan-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DEA994E1562EABF00F7AA40 /* Briathrachan-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,10 +35,6 @@
 		5DEA98F41562D6A600F7AA40 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5DEA98F61562D6A600F7AA40 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5DEA98F81562D6A600F7AA40 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		5DEA98FC1562D6A600F7AA40 /* Briathrachan-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Briathrachan-Info.plist"; sourceTree = "<group>"; };
-		5DEA98FE1562D6A600F7AA40 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5DEA99001562D6A600F7AA40 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5DEA99021562D6A600F7AA40 /* Briathrachan-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Briathrachan-Prefix.pch"; sourceTree = "<group>"; };
 		5DEA990C1562D6F500F7AA40 /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
 		5DEA990D1562D6F500F7AA40 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		5DEA990E1562D6F500F7AA40 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
@@ -56,12 +52,15 @@
 		5DEA99211562D71100F7AA40 /* TopLeftAlignedLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopLeftAlignedLabel.h; sourceTree = "<group>"; };
 		5DEA99221562D71100F7AA40 /* TopLeftAlignedLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopLeftAlignedLabel.m; sourceTree = "<group>"; };
 		5DEA99231562D75B00F7AA40 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		5DEA99251562D79400F7AA40 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		5DEA99261562D79400F7AA40 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		5DEA99291562D7EE00F7AA40 /* BriathrachanAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BriathrachanAppDelegate.h; sourceTree = "<group>"; };
-		5DEA992A1562D7EE00F7AA40 /* BriathrachanAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BriathrachanAppDelegate.m; sourceTree = "<group>"; };
-		5DEA993B1562D86200F7AA40 /* bb-codes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "bb-codes.txt"; sourceTree = "<group>"; };
-		5DEA993D1562E8A300F7AA40 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		5DEA993F1562EA7500F7AA40 /* Briathrachan-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Briathrachan-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		5DEA99401562EA7500F7AA40 /* BriathrachanAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BriathrachanAppDelegate.h; sourceTree = SOURCE_ROOT; };
+		5DEA99411562EA7500F7AA40 /* BriathrachanAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BriathrachanAppDelegate.m; sourceTree = SOURCE_ROOT; };
+		5DEA99421562EA7500F7AA40 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = SOURCE_ROOT; };
+		5DEA99451562EA8F00F7AA40 /* bb-codes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "bb-codes.txt"; sourceTree = SOURCE_ROOT; };
+		5DEA99461562EA8F00F7AA40 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = SOURCE_ROOT; };
+		5DEA99471562EA8F00F7AA40 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = SOURCE_ROOT; };
+		5DEA994C1562EAB300F7AA40 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		5DEA994E1562EABF00F7AA40 /* Briathrachan-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Briathrachan-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,10 +112,10 @@
 		5DEA98FA1562D6A600F7AA40 /* Other sources */ = {
 			isa = PBXGroup;
 			children = (
-				5DEA99021562D6A600F7AA40 /* Briathrachan-Prefix.pch */,
-				5DEA99001562D6A600F7AA40 /* main.m */,
-				5DEA99291562D7EE00F7AA40 /* BriathrachanAppDelegate.h */,
-				5DEA992A1562D7EE00F7AA40 /* BriathrachanAppDelegate.m */,
+				5DEA993F1562EA7500F7AA40 /* Briathrachan-Prefix.pch */,
+				5DEA99401562EA7500F7AA40 /* BriathrachanAppDelegate.h */,
+				5DEA99411562EA7500F7AA40 /* BriathrachanAppDelegate.m */,
+				5DEA99421562EA7500F7AA40 /* main.m */,
 			);
 			name = "Other sources";
 			path = Briathrachan;
@@ -125,12 +124,11 @@
 		5DEA98FB1562D6A600F7AA40 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5DEA993D1562E8A300F7AA40 /* README.md */,
-				5DEA993B1562D86200F7AA40 /* bb-codes.txt */,
-				5DEA99251562D79400F7AA40 /* Icon.png */,
-				5DEA99261562D79400F7AA40 /* Default.png */,
-				5DEA98FC1562D6A600F7AA40 /* Briathrachan-Info.plist */,
-				5DEA98FD1562D6A600F7AA40 /* InfoPlist.strings */,
+				5DEA994E1562EABF00F7AA40 /* Briathrachan-Info.plist */,
+				5DEA994B1562EAB300F7AA40 /* InfoPlist.strings */,
+				5DEA99451562EA8F00F7AA40 /* bb-codes.txt */,
+				5DEA99461562EA8F00F7AA40 /* Default.png */,
+				5DEA99471562EA8F00F7AA40 /* Icon.png */,
 			);
 			name = "Supporting Files";
 			path = Briathrachan;
@@ -216,15 +214,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DEA98FF1562D6A600F7AA40 /* InfoPlist.strings in Resources */,
 				5DEA99101562D6F500F7AA40 /* RootViewController.xib in Resources */,
 				5DEA99111562D6F500F7AA40 /* MainWindow.xib in Resources */,
 				5DEA99121562D6F500F7AA40 /* DetailViewController.xib in Resources */,
 				5DEA99131562D6F500F7AA40 /* InfoViewController.xib in Resources */,
-				5DEA99271562D79400F7AA40 /* Icon.png in Resources */,
-				5DEA99281562D79400F7AA40 /* Default.png in Resources */,
-				5DEA993C1562D86200F7AA40 /* bb-codes.txt in Resources */,
-				5DEA993E1562E8A300F7AA40 /* README.md in Resources */,
+				5DEA99481562EA8F00F7AA40 /* bb-codes.txt in Resources */,
+				5DEA99491562EA8F00F7AA40 /* Default.png in Resources */,
+				5DEA994A1562EA8F00F7AA40 /* Icon.png in Resources */,
+				5DEA994D1562EAB300F7AA40 /* InfoPlist.strings in Resources */,
+				5DEA994F1562EABF00F7AA40 /* Briathrachan-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,24 +233,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DEA993A1562D80500F7AA40 /* BriathrachanAppDelegate.m in Sources */,
 				5DEA992C1562D7FB00F7AA40 /* InfoViewController.m in Sources */,
 				5DEA992E1562D7FB00F7AA40 /* DetailViewController.m in Sources */,
 				5DEA99301562D7FB00F7AA40 /* RootViewController.m in Sources */,
 				5DEA99341562D7FB00F7AA40 /* WordEntry.m in Sources */,
 				5DEA99361562D7FB00F7AA40 /* BBParser.m in Sources */,
 				5DEA99381562D7FB00F7AA40 /* TopLeftAlignedLabel.m in Sources */,
-				5DEA99011562D6A600F7AA40 /* main.m in Sources */,
+				5DEA99431562EA7500F7AA40 /* BriathrachanAppDelegate.m in Sources */,
+				5DEA99441562EA7500F7AA40 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5DEA98FD1562D6A600F7AA40 /* InfoPlist.strings */ = {
+		5DEA994B1562EAB300F7AA40 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5DEA98FE1562D6A600F7AA40 /* en */,
+				5DEA994C1562EAB300F7AA40 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
