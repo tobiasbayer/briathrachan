@@ -307,7 +307,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Briathrachan/Briathrachan-Prefix.pch";
-				INFOPLIST_FILE = "Briathrachan/Briathrachan-Info.plist";
+				INFOPLIST_FILE = "Briathrachan-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -319,7 +319,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Briathrachan/Briathrachan-Prefix.pch";
-				INFOPLIST_FILE = "Briathrachan/Briathrachan-Info.plist";
+				INFOPLIST_FILE = "Briathrachan-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
