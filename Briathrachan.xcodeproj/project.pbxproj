@@ -1,0 +1,261 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5DEA98F51562D6A600F7AA40 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DEA98F41562D6A600F7AA40 /* UIKit.framework */; };
+		5DEA98F71562D6A600F7AA40 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DEA98F61562D6A600F7AA40 /* Foundation.framework */; };
+		5DEA98F91562D6A600F7AA40 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DEA98F81562D6A600F7AA40 /* CoreGraphics.framework */; };
+		5DEA98FF1562D6A600F7AA40 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5DEA98FD1562D6A600F7AA40 /* InfoPlist.strings */; };
+		5DEA99011562D6A600F7AA40 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DEA99001562D6A600F7AA40 /* main.m */; };
+		5DEA99051562D6A600F7AA40 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DEA99041562D6A600F7AA40 /* AppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5DEA98F01562D6A600F7AA40 /* Briathrachan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Briathrachan.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DEA98F41562D6A600F7AA40 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5DEA98F61562D6A600F7AA40 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5DEA98F81562D6A600F7AA40 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5DEA98FC1562D6A600F7AA40 /* Briathrachan-Info.plist */ = {isa = PBXFileReference; path = "Briathrachan-Info.plist"; sourceTree = "<group>"; };
+		5DEA98FE1562D6A600F7AA40 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5DEA99001562D6A600F7AA40 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5DEA99021562D6A600F7AA40 /* Briathrachan-Prefix.pch */ = {isa = PBXFileReference; path = "Briathrachan-Prefix.pch"; sourceTree = "<group>"; };
+		5DEA99031562D6A600F7AA40 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		5DEA99041562D6A600F7AA40 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5DEA98ED1562D6A600F7AA40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DEA98F51562D6A600F7AA40 /* UIKit.framework in Frameworks */,
+				5DEA98F71562D6A600F7AA40 /* Foundation.framework in Frameworks */,
+				5DEA98F91562D6A600F7AA40 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5DEA98E51562D6A600F7AA40 = {
+			isa = PBXGroup;
+			children = (
+				5DEA98FA1562D6A600F7AA40 /* Briathrachan */,
+				5DEA98F31562D6A600F7AA40 /* Frameworks */,
+				5DEA98F11562D6A600F7AA40 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5DEA98F11562D6A600F7AA40 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5DEA98F01562D6A600F7AA40 /* Briathrachan.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5DEA98F31562D6A600F7AA40 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5DEA98F41562D6A600F7AA40 /* UIKit.framework */,
+				5DEA98F61562D6A600F7AA40 /* Foundation.framework */,
+				5DEA98F81562D6A600F7AA40 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5DEA98FA1562D6A600F7AA40 /* Briathrachan */ = {
+			isa = PBXGroup;
+			children = (
+				5DEA99031562D6A600F7AA40 /* AppDelegate.h */,
+				5DEA99041562D6A600F7AA40 /* AppDelegate.m */,
+				5DEA98FB1562D6A600F7AA40 /* Supporting Files */,
+			);
+			path = Briathrachan;
+			sourceTree = "<group>";
+		};
+		5DEA98FB1562D6A600F7AA40 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5DEA98FC1562D6A600F7AA40 /* Briathrachan-Info.plist */,
+				5DEA98FD1562D6A600F7AA40 /* InfoPlist.strings */,
+				5DEA99001562D6A600F7AA40 /* main.m */,
+				5DEA99021562D6A600F7AA40 /* Briathrachan-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5DEA98EF1562D6A600F7AA40 /* Briathrachan */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DEA99081562D6A600F7AA40 /* Build configuration list for PBXNativeTarget "Briathrachan" */;
+			buildPhases = (
+				5DEA98EC1562D6A600F7AA40 /* Sources */,
+				5DEA98ED1562D6A600F7AA40 /* Frameworks */,
+				5DEA98EE1562D6A600F7AA40 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Briathrachan;
+			productName = Briathrachan;
+			productReference = 5DEA98F01562D6A600F7AA40 /* Briathrachan.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5DEA98E71562D6A600F7AA40 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 5DEA98EA1562D6A600F7AA40 /* Build configuration list for PBXProject "Briathrachan" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5DEA98E51562D6A600F7AA40;
+			productRefGroup = 5DEA98F11562D6A600F7AA40 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5DEA98EF1562D6A600F7AA40 /* Briathrachan */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5DEA98EE1562D6A600F7AA40 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DEA98FF1562D6A600F7AA40 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5DEA98EC1562D6A600F7AA40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DEA99011562D6A600F7AA40 /* main.m in Sources */,
+				5DEA99051562D6A600F7AA40 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5DEA98FD1562D6A600F7AA40 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5DEA98FE1562D6A600F7AA40 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5DEA99061562D6A600F7AA40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5DEA99071562D6A600F7AA40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5DEA99091562D6A600F7AA40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Briathrachan/Briathrachan-Prefix.pch";
+				INFOPLIST_FILE = "Briathrachan/Briathrachan-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5DEA990A1562D6A600F7AA40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Briathrachan/Briathrachan-Prefix.pch";
+				INFOPLIST_FILE = "Briathrachan/Briathrachan-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5DEA98EA1562D6A600F7AA40 /* Build configuration list for PBXProject "Briathrachan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DEA99061562D6A600F7AA40 /* Debug */,
+				5DEA99071562D6A600F7AA40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5DEA99081562D6A600F7AA40 /* Build configuration list for PBXNativeTarget "Briathrachan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DEA99091562D6A600F7AA40 /* Debug */,
+				5DEA990A1562D6A600F7AA40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5DEA98E71562D6A600F7AA40 /* Project object */;
+}
