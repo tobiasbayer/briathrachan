@@ -14,9 +14,13 @@
  limitations under the License.
  */
 
-#import <Availability.h>
+#import "WordEntry.h"
 
-#ifdef __OBJC__
-    #import <UIKit/UIKit.h>
-    #import <Foundation/Foundation.h>
-#endif
+@implementation WordEntry
+
+@synthesize original;
+@synthesize translation;
+@synthesize originalForSearch;
+
+
+@end

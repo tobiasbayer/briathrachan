@@ -16,12 +16,25 @@
 
 #import <UIKit/UIKit.h>
 
-#import "BriathrachanAppDelegate.h"
-
-int main(int argc, char *argv[])
-{
-    @autoreleasepool {
-        int retVal = UIApplicationMain(argc, argv, nil, nil);
-        return retVal;
-    }
+@interface RootViewController : UIViewController <UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource> {
+	NSDictionary *entries;
+	NSArray *index;
+	NSMutableArray *tempEntries;
+	NSArray *copyEntries;
+	
+	BOOL isSearching;
+	BOOL maySelectRow;
+	
+	IBOutlet UISearchBar *searchBar;
+	IBOutlet UITableView *tableView;
+	IBOutlet UIActivityIndicatorView *spinner;
+	IBOutlet UITabBar *tabBar;
 }
+
+@property(nonatomic) NSDictionary *entries;
+@property(nonatomic) NSArray *index;
+@property(nonatomic) UITableView *tableView;
+
+- (IBAction)info:(id)sender;
+
+@end

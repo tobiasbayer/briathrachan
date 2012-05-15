@@ -14,9 +14,12 @@
  limitations under the License.
  */
 
-#import <Availability.h>
+#import <Foundation/Foundation.h>
 
-#ifdef __OBJC__
-    #import <UIKit/UIKit.h>
-    #import <Foundation/Foundation.h>
-#endif
+@interface BBParser : NSObject {
+
+}
+
+- (NSDictionary *)parse:(NSString *)filename;
+
+@end

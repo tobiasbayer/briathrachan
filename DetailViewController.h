@@ -14,9 +14,16 @@
  limitations under the License.
  */
 
-#import <Availability.h>
+#import <UIKit/UIKit.h>
+#import "WordEntry.h"
 
-#ifdef __OBJC__
-    #import <UIKit/UIKit.h>
-    #import <Foundation/Foundation.h>
-#endif
+@interface DetailViewController : UIViewController {
+	IBOutlet UILabel *originalLabel;
+	IBOutlet UILabel *translationLabel;
+	
+	WordEntry *entry;
+}
+
+@property(nonatomic) WordEntry *entry;
+
+@end

@@ -14,9 +14,14 @@
  limitations under the License.
  */
 
-#import <Availability.h>
+#import "TopLeftAlignedLabel.h"
 
-#ifdef __OBJC__
-    #import <UIKit/UIKit.h>
-    #import <Foundation/Foundation.h>
-#endif
+@implementation TopLeftAlignedLabel
+
+-(void) drawTextInRect:(CGRect)inFrame {
+    CGRect draw = [self textRectForBounds:inFrame limitedToNumberOfLines:[self numberOfLines]];
+    draw.origin = CGPointZero;
+    [super drawTextInRect:draw];
+}
+
+@end

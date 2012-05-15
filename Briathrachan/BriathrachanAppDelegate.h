@@ -14,9 +14,16 @@
  limitations under the License.
  */
 
-#import <Availability.h>
+#import <UIKit/UIKit.h>
 
-#ifdef __OBJC__
-    #import <UIKit/UIKit.h>
-    #import <Foundation/Foundation.h>
-#endif
+@interface BriathrachanAppDelegate : NSObject <UIApplicationDelegate> {
+    
+    UIWindow *window;
+    UINavigationController *navigationController;
+}
+
+@property (nonatomic) IBOutlet UIWindow *window;
+@property (nonatomic) IBOutlet UINavigationController *navigationController;
+
+@end
+

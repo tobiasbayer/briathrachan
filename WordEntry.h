@@ -14,9 +14,18 @@
  limitations under the License.
  */
 
-#import <Availability.h>
+#import <Foundation/Foundation.h>
 
-#ifdef __OBJC__
-    #import <UIKit/UIKit.h>
-    #import <Foundation/Foundation.h>
-#endif
+@interface WordEntry : NSObject {
+	NSString *original;
+	NSString *translation;
+	NSString *originalForSearch;
+}
+
+
+@property(nonatomic) NSString *original;
+@property(nonatomic) NSString *originalForSearch;
+@property(nonatomic) NSString *translation;
+
+
+@end

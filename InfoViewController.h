@@ -14,9 +14,18 @@
  limitations under the License.
  */
 
-#import <Availability.h>
+#import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 
-#ifdef __OBJC__
-    #import <UIKit/UIKit.h>
-    #import <Foundation/Foundation.h>
-#endif
+
+@interface InfoViewController : UIViewController <MFMailComposeViewControllerDelegate> {
+	
+	IBOutlet UILabel *linkLabel;
+	IBOutlet UILabel *versionLabel;
+	IBOutlet UIButton *sendFeedbackButton;
+}
+
+- (IBAction)done:(id)sender;
+- (IBAction)sendFeedback:(id)sender;
+
+@end

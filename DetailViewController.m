@@ -14,9 +14,17 @@
  limitations under the License.
  */
 
-#import <Availability.h>
+#import "DetailViewController.h"
 
-#ifdef __OBJC__
-    #import <UIKit/UIKit.h>
-    #import <Foundation/Foundation.h>
-#endif
+@implementation DetailViewController
+
+@synthesize entry;
+
+- (void)viewWillAppear:(BOOL)animated {
+	originalLabel.text = entry.original;
+	translationLabel.text = entry.translation;
+	self.navigationItem.hidesBackButton = NO;
+	[self.navigationController setNavigationBarHidden:NO animated:YES];
+}
+
+@end
