@@ -27,7 +27,6 @@
 		5DEA99491562EA8F00F7AA40 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DEA99461562EA8F00F7AA40 /* Default.png */; };
 		5DEA994A1562EA8F00F7AA40 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DEA99471562EA8F00F7AA40 /* Icon.png */; };
 		5DEA994D1562EAB300F7AA40 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5DEA994B1562EAB300F7AA40 /* InfoPlist.strings */; };
-		5DEA994F1562EABF00F7AA40 /* Briathrachan-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DEA994E1562EABF00F7AA40 /* Briathrachan-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -222,7 +221,6 @@
 				5DEA99491562EA8F00F7AA40 /* Default.png in Resources */,
 				5DEA994A1562EA8F00F7AA40 /* Icon.png in Resources */,
 				5DEA994D1562EAB300F7AA40 /* InfoPlist.strings in Resources */,
-				5DEA994F1562EABF00F7AA40 /* Briathrachan-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,7 +304,7 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Briathrachan/Briathrachan-Prefix.pch";
+				GCC_PREFIX_HEADER = "Briathrachan-Prefix.pch";
 				INFOPLIST_FILE = "Briathrachan-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -318,7 +316,7 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Briathrachan/Briathrachan-Prefix.pch";
+				GCC_PREFIX_HEADER = "Briathrachan-Prefix.pch";
 				INFOPLIST_FILE = "Briathrachan-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
