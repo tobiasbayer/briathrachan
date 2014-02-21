@@ -217,6 +217,14 @@
     return cell;
 }
 
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+	if(_isSearching) {
+		return nil;
+    }
+	
+	return _index;
+}
+
 #pragma mark - Searching
 
 - (NSRange)searchInTranslation:(NSString *)translation searchFor:(NSString *)searchText
