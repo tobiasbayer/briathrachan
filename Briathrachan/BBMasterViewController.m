@@ -32,6 +32,8 @@
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, weak) IBOutlet UISearchBar *searchBar;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableViewBottomConstraint;
+
 @end
 
 @implementation BBMasterViewController
@@ -41,7 +43,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(keyboardDidShow:)
+												 name:UIKeyboardDidShowNotification
+											   object:nil];
+	
+    [[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(keyboardWillHide:)
+												 name:UIKeyboardWillHideNotification
+											   object:nil];
+    
      _tableView.contentInset = UIEdgeInsetsMake(88, 0, 0, 0);
+    
     [self buildIndex];
     [self parse];
 }
@@ -67,6 +81,40 @@
         
         ((BBWordDetailController *)segue.destinationViewController).word = word;
     }
+}
+
+#pragma mark - Keyboard handling
+
+- (void)keyboardDidShow:(NSNotification *)notification {
+    NSDictionary *info = [notification userInfo];
+    NSValue *kbFrame = [info objectForKey:UIKeyboardFrameEndUserInfoKey];
+    
+    NSTimeInterval animationDuration = [[info objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    CGRect keyboardFrame = [kbFrame CGRectValue];
+    
+    CGRect finalKeyboardFrame = [self.view convertRect:keyboardFrame fromView:self.view.window];
+    
+    int kbHeight = finalKeyboardFrame.size.height;
+    
+    int height = kbHeight + _tableViewBottomConstraint.constant;
+    
+    _tableViewBottomConstraint.constant = height;    
+    
+    [UIView animateWithDuration:animationDuration animations:^{
+        [self.view layoutIfNeeded];
+    }];
+}
+
+- (void)keyboardWillHide:(NSNotification *)notification {
+    NSDictionary *info = [notification userInfo];
+    
+    NSTimeInterval animationDuration = [[info objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    
+    _tableViewBottomConstraint.constant = 0;
+    
+    [UIView animateWithDuration:animationDuration animations:^{
+        [self.view layoutIfNeeded];
+    }];
 }
 
 #pragma mark - File parsing
