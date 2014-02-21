@@ -248,6 +248,7 @@
 }
 
 - (void)doneSearching {
+    _searchBar.showsCancelButton = NO;
 	_searchBar.text = @"";
 	[_searchBar resignFirstResponder];
 	
@@ -271,7 +272,8 @@
 
 #pragma mark - Search Bar
 
-- (void)searchBarTextDidBeginEditing:(UISearchBar *)theSearchBar {
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
+    searchBar.showsCancelButton = YES;
 	_isSearching = YES;
 	_maySelectRow = NO;
 	self.tableView.scrollEnabled = NO;
@@ -279,10 +281,10 @@
 	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]
                                               initWithBarButtonSystemItem:UIBarButtonSystemItemDone
                                               target:self action:@selector(doneSearching)];
-	[self searchBar:theSearchBar textDidChange:theSearchBar.text];
+	[self searchBar:searchBar textDidChange:searchBar.text];
 }
 
-- (void)searchBar:(UISearchBar *)theSearchBar textDidChange:(NSString *)searchText {
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
 	if([searchText length] > 0) {
 		_isSearching = YES;
 		_maySelectRow = YES;
