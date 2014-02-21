@@ -54,7 +54,7 @@
 												 name:UIKeyboardWillHideNotification
 											   object:nil];
     
-     _tableView.contentInset = UIEdgeInsetsMake(88, 0, 0, 0);
+     _tableView.contentInset = UIEdgeInsetsMake(68, 0, 0, 0);
     
     [self buildIndex];
     [self parse];
