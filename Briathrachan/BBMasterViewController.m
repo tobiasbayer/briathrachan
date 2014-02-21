@@ -64,6 +64,14 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     self.navigationController.navigationBarHidden = YES;
+    
+    for(UIView *subView in [_searchBar subviews]) {
+        for(UIView *subSubView in [subView subviews]) {
+            if([subSubView conformsToProtocol:@protocol(UITextInputTraits)]) {
+                [(UITextField *)subSubView setReturnKeyType:UIReturnKeyDone];
+            }
+        }
+    }
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -122,9 +130,6 @@
 #pragma mark - File parsing
 - (void)parse {
 	@autoreleasepool {
-        //TODO remove logs
-		NSLog(@"Parsing...");
-		
 		BBParser *parser = [[BBParser alloc] init];
 		_entries = [parser parse:[[NSBundle mainBundle] pathForResource:@"dictionary" ofType:@"txt"]];
 		
@@ -132,18 +137,11 @@
         
 		[_tableView reloadData];
 		
-		//[_spinner stopAnimating];
-		//_tabBar.selectedItem = [_tabBar.items objectAtIndex:0];
-		//_tabBar.userInteractionEnabled = YES;
-		
 		_tempEntries = [[NSMutableArray alloc] init];
 		
 		for(NSArray *array in [_entries allValues]) {
 			[_tempEntries addObjectsFromArray:array];
-		}
-		
-		NSLog(@"Finished parsing.");
-        
+		}        
 	}
 }
 
@@ -321,7 +319,7 @@
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)theSearchBar {
-	[self searchTableView];
+	[self doneSearching];
 }
 
 @end
