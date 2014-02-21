@@ -47,19 +47,17 @@
 
 - (NSDictionary *)parse:(NSString *)filename {
 	NSString *filecontent = [NSString stringWithContentsOfFile:filename encoding:NSUTF8StringEncoding error:nil];
-	NSLog(@"File length: %d", [filecontent length]);
 	NSArray *lines = [filecontent componentsSeparatedByString:@"\n"];
-	NSLog(@"Number of lines: %d", [lines count]);
 	
 	NSMutableDictionary *entryDict = [[NSMutableDictionary alloc] init];
 		
 	for(NSString *line in lines) {
-		int originalStart = [line rangeOfString:@"["].location;
-		int originalEnd = [line rangeOfString:@"]"].location;
+		NSUInteger originalStart = [line rangeOfString:@"["].location;
+		NSUInteger originalEnd = [line rangeOfString:@"]"].location;
 		if(originalStart != NSNotFound) {
 			NSString *original = [line substringWithRange:NSMakeRange(originalStart + 1, originalEnd - originalStart - 1)];
-			int translationStart = originalEnd + 2;
-			int translationEnd = [line length];
+			NSUInteger translationStart = originalEnd + 2;
+			NSUInteger translationEnd = [line length];
 			NSString *translation = [line substringWithRange:NSMakeRange(translationStart, translationEnd - translationStart)];
 			
 			//TODO convert to string without accents
