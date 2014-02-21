@@ -1,5 +1,5 @@
 //
-//  TBMasterViewController.h
+//  TBAppDelegate.h
 //  Briathrachan
 //
 //  Created by Tobias Bayer on 20.02.14.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TBMasterViewController : UITableViewController
+@interface BBAppDelegate : UIResponder <UIApplicationDelegate>
+
+@property (strong, nonatomic) UIWindow *window;
 
 @end

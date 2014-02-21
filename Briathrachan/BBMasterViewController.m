@@ -6,21 +6,22 @@
 //  Copyright (c) 2014 Tobias Bayer. All rights reserved.
 //
 
-#import "TBMasterViewController.h"
-#import "TBDetailViewController.h"
-#import "WordEntry.h"
+#import "BBMasterViewController.h"
+#import "BBDetailViewController.h"
+#import "BBWordEntry.h"
 #import "BBParser.h"
 
-@interface TBMasterViewController ()
+@interface BBMasterViewController ()
 
 @property (nonatomic, strong) NSArray *index;
-@property (nonatomic, assign) BOOL isSearching;
 @property (nonatomic, strong) NSDictionary *entries;
 @property (nonatomic, strong) NSMutableArray *tempEntries;
 
+@property (nonatomic, assign) BOOL isSearching;
+
 @end
 
-@implementation TBMasterViewController
+@implementation BBMasterViewController
 
 - (void)viewDidLoad
 {
@@ -34,7 +35,7 @@
 		NSLog(@"Parsing...");
 		
 		BBParser *parser = [[BBParser alloc] init];
-		_entries = [parser parse:[[NSBundle mainBundle] pathForResource:@"bb-codes" ofType:@"txt"]];
+		_entries = [parser parse:[[NSBundle mainBundle] pathForResource:@"dictionary" ofType:@"txt"]];
 		
 		[self buildIndex];
         
@@ -114,7 +115,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
 	
-	WordEntry *entry = nil;
+	BBWordEntry *entry = nil;
 	if(_isSearching) {
 		//entry = [copyEntries objectAtIndex:indexPath.row];
 	}

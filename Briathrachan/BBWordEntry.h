@@ -14,13 +14,18 @@
  limitations under the License.
  */
 
-#import "WordEntry.h"
+#import <Foundation/Foundation.h>
 
-@implementation WordEntry
+@interface BBWordEntry : NSObject {
+	NSString *original;
+	NSString *translation;
+	NSString *originalForSearch;
+}
 
-@synthesize original;
-@synthesize translation;
-@synthesize originalForSearch;
+
+@property(nonatomic) NSString *original;
+@property(nonatomic) NSString *originalForSearch;
+@property(nonatomic) NSString *translation;
 
 
 @end

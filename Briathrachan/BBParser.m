@@ -15,7 +15,7 @@
  */
 
 #import "BBParser.h"
-#import "WordEntry.h"
+#import "BBWordEntry.h"
 
 @implementation BBParser
 
@@ -70,7 +70,7 @@
 				[entryDict setObject:entryList forKey:key];
 			}
 			
-			WordEntry *entry = [[WordEntry alloc] init];
+			BBWordEntry *entry = [[BBWordEntry alloc] init];
 			entry.original = original;
 			entry.translation = translation;
 			entry.originalForSearch = [self searchableString:original];

@@ -22,7 +22,7 @@
         <!--Master View Controller - Vocabulary-->
         <scene sceneID="VgW-fR-Quf">
             <objects>
-                <tableViewController title="Vocabulary" id="pGg-6v-bdr" customClass="TBMasterViewController" sceneMemberID="viewController">
+                <tableViewController title="Vocabulary" id="pGg-6v-bdr" customClass="BBMasterViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="mLL-gJ-YKr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -74,7 +74,7 @@
         <!--Detail View Controller - Detail-->
         <scene sceneID="Cn3-H9-jdl">
             <objects>
-                <viewController title="Detail" id="Ah7-4n-0Wa" customClass="TBDetailViewController" sceneMemberID="viewController">
+                <viewController title="Detail" id="Ah7-4n-0Wa" customClass="BBDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="V7P-3e-zVN"/>
                         <viewControllerLayoutGuide type="bottom" id="nhb-U8-zQo"/>

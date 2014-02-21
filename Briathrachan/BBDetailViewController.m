@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 Tobias Bayer. All rights reserved.
 //
 
-#import "TBDetailViewController.h"
+#import "BBDetailViewController.h"
 
-@interface TBDetailViewController ()
+@interface BBDetailViewController ()
 - (void)configureView;
 @end
 
-@implementation TBDetailViewController
+@implementation BBDetailViewController
 
 #pragma mark - Managing the detail item
 

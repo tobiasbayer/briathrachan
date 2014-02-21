@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Tobias Bayer. All rights reserved.
 //
 
-#import "TBAppDelegate.h"
+#import "BBAppDelegate.h"
 
-@implementation TBAppDelegate
+@implementation BBAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

@@ -12,19 +12,19 @@
 		5D4079C618B65FF900382B97 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D4079C518B65FF900382B97 /* UIKit.framework */; };
 		5D4079CC18B65FF900382B97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5D4079CA18B65FF900382B97 /* InfoPlist.strings */; };
 		5D4079CE18B65FF900382B97 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4079CD18B65FF900382B97 /* main.m */; };
-		5D4079D218B65FF900382B97 /* TBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4079D118B65FF900382B97 /* TBAppDelegate.m */; };
+		5D4079D218B65FF900382B97 /* BBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4079D118B65FF900382B97 /* BBAppDelegate.m */; };
 		5D4079D518B65FF900382B97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D4079D318B65FF900382B97 /* Main.storyboard */; };
-		5D4079D818B65FF900382B97 /* TBMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4079D718B65FF900382B97 /* TBMasterViewController.m */; };
-		5D4079DB18B65FF900382B97 /* TBDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4079DA18B65FF900382B97 /* TBDetailViewController.m */; };
+		5D4079D818B65FF900382B97 /* BBMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4079D718B65FF900382B97 /* BBMasterViewController.m */; };
+		5D4079DB18B65FF900382B97 /* BBDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4079DA18B65FF900382B97 /* BBDetailViewController.m */; };
 		5D4079DD18B65FF900382B97 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D4079DC18B65FF900382B97 /* Images.xcassets */; };
 		5D4079E418B65FF900382B97 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D4079E318B65FF900382B97 /* XCTest.framework */; };
 		5D4079E518B65FF900382B97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D4079C118B65FF900382B97 /* Foundation.framework */; };
 		5D4079E618B65FF900382B97 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D4079C518B65FF900382B97 /* UIKit.framework */; };
 		5D4079EE18B65FF900382B97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5D4079EC18B65FF900382B97 /* InfoPlist.strings */; };
 		5D4079F018B65FF900382B97 /* BriathrachanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4079EF18B65FF900382B97 /* BriathrachanTests.m */; };
-		5D4079FD18B660AE00382B97 /* WordEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4079FA18B660AE00382B97 /* WordEntry.m */; };
+		5D4079FD18B660AE00382B97 /* BBWordEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4079FA18B660AE00382B97 /* BBWordEntry.m */; };
 		5D4079FE18B660AE00382B97 /* BBParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4079FC18B660AE00382B97 /* BBParser.m */; };
-		5D407A0018B660F400382B97 /* bb-codes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5D4079FF18B660F400382B97 /* bb-codes.txt */; };
+		5D407A0018B660F400382B97 /* dictionary.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5D4079FF18B660F400382B97 /* dictionary.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,24 +46,24 @@
 		5D4079CB18B65FF900382B97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5D4079CD18B65FF900382B97 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5D4079CF18B65FF900382B97 /* Briathrachan-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Briathrachan-Prefix.pch"; sourceTree = "<group>"; };
-		5D4079D018B65FF900382B97 /* TBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBAppDelegate.h; sourceTree = "<group>"; };
-		5D4079D118B65FF900382B97 /* TBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBAppDelegate.m; sourceTree = "<group>"; };
+		5D4079D018B65FF900382B97 /* BBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBAppDelegate.h; sourceTree = "<group>"; };
+		5D4079D118B65FF900382B97 /* BBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBAppDelegate.m; sourceTree = "<group>"; };
 		5D4079D418B65FF900382B97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5D4079D618B65FF900382B97 /* TBMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBMasterViewController.h; sourceTree = "<group>"; };
-		5D4079D718B65FF900382B97 /* TBMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBMasterViewController.m; sourceTree = "<group>"; };
-		5D4079D918B65FF900382B97 /* TBDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBDetailViewController.h; sourceTree = "<group>"; };
-		5D4079DA18B65FF900382B97 /* TBDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBDetailViewController.m; sourceTree = "<group>"; };
-		5D4079DC18B65FF900382B97 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5D4079D618B65FF900382B97 /* BBMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBMasterViewController.h; sourceTree = "<group>"; };
+		5D4079D718B65FF900382B97 /* BBMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBMasterViewController.m; sourceTree = "<group>"; };
+		5D4079D918B65FF900382B97 /* BBDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBDetailViewController.h; sourceTree = "<group>"; };
+		5D4079DA18B65FF900382B97 /* BBDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBDetailViewController.m; sourceTree = "<group>"; };
+		5D4079DC18B65FF900382B97 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Briathrachan/Images.xcassets; sourceTree = "<group>"; };
 		5D4079E218B65FF900382B97 /* BriathrachanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BriathrachanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D4079E318B65FF900382B97 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		5D4079EB18B65FF900382B97 /* BriathrachanTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BriathrachanTests-Info.plist"; sourceTree = "<group>"; };
 		5D4079ED18B65FF900382B97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5D4079EF18B65FF900382B97 /* BriathrachanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BriathrachanTests.m; sourceTree = "<group>"; };
-		5D4079F918B660AE00382B97 /* WordEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordEntry.h; sourceTree = "<group>"; };
-		5D4079FA18B660AE00382B97 /* WordEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordEntry.m; sourceTree = "<group>"; };
+		5D4079F918B660AE00382B97 /* BBWordEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBWordEntry.h; sourceTree = "<group>"; };
+		5D4079FA18B660AE00382B97 /* BBWordEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBWordEntry.m; sourceTree = "<group>"; };
 		5D4079FB18B660AE00382B97 /* BBParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBParser.h; sourceTree = "<group>"; };
 		5D4079FC18B660AE00382B97 /* BBParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBParser.m; sourceTree = "<group>"; };
-		5D4079FF18B660F400382B97 /* bb-codes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "bb-codes.txt"; sourceTree = "<group>"; };
+		5D4079FF18B660F400382B97 /* dictionary.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dictionary.txt; path = Briathrachan/dictionary.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +93,10 @@
 		5D4079B518B65FF900382B97 = {
 			isa = PBXGroup;
 			children = (
-				5D4079C718B65FF900382B97 /* Briathrachan */,
+				5D4079C718B65FF900382B97 /* Classes */,
+				5D407A0218B7333700382B97 /* Storyboards */,
+				5D407A0118B7330D00382B97 /* Resources */,
+				5D4079C818B65FF900382B97 /* Supporting Files */,
 				5D4079E918B65FF900382B97 /* BriathrachanTests */,
 				5D4079C018B65FF900382B97 /* Frameworks */,
 				5D4079BF18B65FF900382B97 /* Products */,
@@ -120,36 +123,34 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5D4079C718B65FF900382B97 /* Briathrachan */ = {
+		5D4079C718B65FF900382B97 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				5D4079F918B660AE00382B97 /* WordEntry.h */,
-				5D4079FA18B660AE00382B97 /* WordEntry.m */,
+				5D4079F918B660AE00382B97 /* BBWordEntry.h */,
+				5D4079FA18B660AE00382B97 /* BBWordEntry.m */,
 				5D4079FB18B660AE00382B97 /* BBParser.h */,
 				5D4079FC18B660AE00382B97 /* BBParser.m */,
-				5D4079D018B65FF900382B97 /* TBAppDelegate.h */,
-				5D4079D118B65FF900382B97 /* TBAppDelegate.m */,
-				5D4079D318B65FF900382B97 /* Main.storyboard */,
-				5D4079D618B65FF900382B97 /* TBMasterViewController.h */,
-				5D4079D718B65FF900382B97 /* TBMasterViewController.m */,
-				5D4079D918B65FF900382B97 /* TBDetailViewController.h */,
-				5D4079DA18B65FF900382B97 /* TBDetailViewController.m */,
-				5D4079DC18B65FF900382B97 /* Images.xcassets */,
-				5D4079C818B65FF900382B97 /* Supporting Files */,
+				5D4079D018B65FF900382B97 /* BBAppDelegate.h */,
+				5D4079D118B65FF900382B97 /* BBAppDelegate.m */,
+				5D4079D618B65FF900382B97 /* BBMasterViewController.h */,
+				5D4079D718B65FF900382B97 /* BBMasterViewController.m */,
+				5D4079D918B65FF900382B97 /* BBDetailViewController.h */,
+				5D4079DA18B65FF900382B97 /* BBDetailViewController.m */,
 			);
+			name = Classes;
 			path = Briathrachan;
 			sourceTree = "<group>";
 		};
 		5D4079C818B65FF900382B97 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5D4079FF18B660F400382B97 /* bb-codes.txt */,
 				5D4079C918B65FF900382B97 /* Briathrachan-Info.plist */,
 				5D4079CA18B65FF900382B97 /* InfoPlist.strings */,
 				5D4079CD18B65FF900382B97 /* main.m */,
 				5D4079CF18B65FF900382B97 /* Briathrachan-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			path = Briathrachan;
 			sourceTree = "<group>";
 		};
 		5D4079E918B65FF900382B97 /* BriathrachanTests */ = {
@@ -168,6 +169,24 @@
 				5D4079EC18B65FF900382B97 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5D407A0118B7330D00382B97 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5D4079DC18B65FF900382B97 /* Images.xcassets */,
+				5D4079FF18B660F400382B97 /* dictionary.txt */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		5D407A0218B7333700382B97 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				5D4079D318B65FF900382B97 /* Main.storyboard */,
+			);
+			name = Storyboards;
+			path = Briathrachan;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,7 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D4079DD18B65FF900382B97 /* Images.xcassets in Resources */,
-				5D407A0018B660F400382B97 /* bb-codes.txt in Resources */,
+				5D407A0018B660F400382B97 /* dictionary.txt in Resources */,
 				5D4079CC18B65FF900382B97 /* InfoPlist.strings in Resources */,
 				5D4079D518B65FF900382B97 /* Main.storyboard in Resources */,
 			);
@@ -270,11 +289,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D4079FE18B660AE00382B97 /* BBParser.m in Sources */,
-				5D4079D218B65FF900382B97 /* TBAppDelegate.m in Sources */,
-				5D4079FD18B660AE00382B97 /* WordEntry.m in Sources */,
-				5D4079D818B65FF900382B97 /* TBMasterViewController.m in Sources */,
+				5D4079D218B65FF900382B97 /* BBAppDelegate.m in Sources */,
+				5D4079FD18B660AE00382B97 /* BBWordEntry.m in Sources */,
+				5D4079D818B65FF900382B97 /* BBMasterViewController.m in Sources */,
 				5D4079CE18B65FF900382B97 /* main.m in Sources */,
-				5D4079DB18B65FF900382B97 /* TBDetailViewController.m in Sources */,
+				5D4079DB18B65FF900382B97 /* BBDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

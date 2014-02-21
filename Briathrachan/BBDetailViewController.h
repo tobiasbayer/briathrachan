@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TBDetailViewController : UIViewController
+@interface BBDetailViewController : UIViewController
 
 @property (strong, nonatomic) id detailItem;
 
