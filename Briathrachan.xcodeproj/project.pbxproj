@@ -27,6 +27,9 @@
 		5DE850CB18B74B4600553EA4 /* TBTopLeftAlignedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE850CA18B74B4600553EA4 /* TBTopLeftAlignedLabel.m */; };
 		5DE850CE18B7AEA700553EA4 /* BBInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE850CD18B7AEA700553EA4 /* BBInfoViewController.m */; };
 		5DE850D018B7E65600553EA4 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DE850CF18B7E65600553EA4 /* MessageUI.framework */; };
+		5DE850D218B7E6D900553EA4 /* icon-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DE850D118B7E6D900553EA4 /* icon-retina.png */; };
+		5DE850D518B7E89600553EA4 /* default-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DE850D318B7E89600553EA4 /* default-small.png */; };
+		5DE850D618B7E89600553EA4 /* default-large.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DE850D418B7E89600553EA4 /* default-large.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +73,9 @@
 		5DE850CC18B7AEA700553EA4 /* BBInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBInfoViewController.h; sourceTree = "<group>"; };
 		5DE850CD18B7AEA700553EA4 /* BBInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBInfoViewController.m; sourceTree = "<group>"; };
 		5DE850CF18B7E65600553EA4 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		5DE850D118B7E6D900553EA4 /* icon-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-retina.png"; sourceTree = "<group>"; };
+		5DE850D318B7E89600553EA4 /* default-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default-small.png"; sourceTree = "<group>"; };
+		5DE850D418B7E89600553EA4 /* default-large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default-large.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +162,9 @@
 		5D4079C818B65FF900382B97 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5DE850D318B7E89600553EA4 /* default-small.png */,
+				5DE850D418B7E89600553EA4 /* default-large.png */,
+				5DE850D118B7E6D900553EA4 /* icon-retina.png */,
 				5D4079C918B65FF900382B97 /* Briathrachan-Info.plist */,
 				5D4079CA18B65FF900382B97 /* InfoPlist.strings */,
 				5D4079CD18B65FF900382B97 /* main.m */,
@@ -280,10 +289,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DE850D618B7E89600553EA4 /* default-large.png in Resources */,
 				5D4079DD18B65FF900382B97 /* Images.xcassets in Resources */,
 				5D407A0018B660F400382B97 /* dictionary.txt in Resources */,
+				5DE850D218B7E6D900553EA4 /* icon-retina.png in Resources */,
 				5D4079CC18B65FF900382B97 /* InfoPlist.strings in Resources */,
 				5D4079D518B65FF900382B97 /* Main.storyboard in Resources */,
+				5DE850D518B7E89600553EA4 /* default-small.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
