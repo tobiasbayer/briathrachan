@@ -148,12 +148,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)aTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellIdentifier = @"Cell";
-    
-    UITableViewCell *cell = [aTableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-    }
+    UITableViewCell *cell = [aTableView dequeueReusableCellWithIdentifier:@"Cell"];
 	
 	BBWordEntry *entry = nil;
 	if(_isSearching) {
