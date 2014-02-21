@@ -35,6 +35,11 @@
     [super viewDidLoad];
     self.navigationController.navigationBarHidden = NO;
     self.navigationItem.title = nil;
+    
+    UIButton *infoButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    [infoButton addTarget:self action:@selector(showInfo:) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:infoButton];
+
     [self configureView];
 }
 
@@ -44,6 +49,11 @@
         _wordHeaderLabel.text = _word.original;
         _wordTranslationLabel.text = _word.translation;
     }
+}
+
+- (void)showInfo:(id)sender
+{
+    [self performSegueWithIdentifier:@"showInfo" sender:sender];
 }
 
 @end

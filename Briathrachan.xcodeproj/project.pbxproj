@@ -25,6 +25,7 @@
 		5D4079FE18B660AE00382B97 /* BBParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4079FC18B660AE00382B97 /* BBParser.m */; };
 		5D407A0018B660F400382B97 /* dictionary.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5D4079FF18B660F400382B97 /* dictionary.txt */; };
 		5DE850CB18B74B4600553EA4 /* TBTopLeftAlignedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE850CA18B74B4600553EA4 /* TBTopLeftAlignedLabel.m */; };
+		5DE850CE18B7AEA700553EA4 /* BBInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE850CD18B7AEA700553EA4 /* BBInfoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,8 @@
 		5D4079FF18B660F400382B97 /* dictionary.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dictionary.txt; path = Briathrachan/dictionary.txt; sourceTree = "<group>"; };
 		5DE850C918B74B4600553EA4 /* TBTopLeftAlignedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBTopLeftAlignedLabel.h; sourceTree = "<group>"; };
 		5DE850CA18B74B4600553EA4 /* TBTopLeftAlignedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBTopLeftAlignedLabel.m; sourceTree = "<group>"; };
+		5DE850CC18B7AEA700553EA4 /* BBInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBInfoViewController.h; sourceTree = "<group>"; };
+		5DE850CD18B7AEA700553EA4 /* BBInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBInfoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +142,8 @@
 				5D4079D718B65FF900382B97 /* BBMasterViewController.m */,
 				5D4079D918B65FF900382B97 /* BBWordDetailController.h */,
 				5D4079DA18B65FF900382B97 /* BBWordDetailController.m */,
+				5DE850CC18B7AEA700553EA4 /* BBInfoViewController.h */,
+				5DE850CD18B7AEA700553EA4 /* BBInfoViewController.m */,
 			);
 			name = Classes;
 			path = Briathrachan;
@@ -290,6 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DE850CE18B7AEA700553EA4 /* BBInfoViewController.m in Sources */,
 				5D4079FE18B660AE00382B97 /* BBParser.m in Sources */,
 				5D4079D218B65FF900382B97 /* BBAppDelegate.m in Sources */,
 				5D4079FD18B660AE00382B97 /* BBWordEntry.m in Sources */,
