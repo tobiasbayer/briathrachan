@@ -16,9 +16,10 @@
 
 #import <UIKit/UIKit.h>
 
+#import "BBWordEntry.h"
+
 @interface BBWordDetailController : UIViewController
 
-@property (nonatomic, strong) id detailItem;
-@property (nonatomic, weak) IBOutlet UILabel *detailDescriptionLabel;
+@property (nonatomic, strong) BBWordEntry *word;
 
 @end

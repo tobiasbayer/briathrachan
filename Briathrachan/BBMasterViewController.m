@@ -43,17 +43,33 @@
     [self parse];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    self.navigationController.navigationBarHidden = YES;
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [_tableView indexPathForSelectedRow];
+        BBWordEntry *word = nil;
         
+        if(_isSearching) {
+           // word = [_copyEntries objectAtIndex:indexPath.row];
+        }
+        else {
+            NSString *indexString = [_index objectAtIndex:indexPath.section];
+            NSArray *entryArray = [_entries objectForKey:indexString];
+            word = [entryArray objectAtIndex:indexPath.row];
+        }
+        
+        ((BBWordDetailController *)segue.destinationViewController).word = word;
     }
 }
 
 #pragma mark - File parsing
 - (void)parse {
 	@autoreleasepool {
+        //TODO remove logs
 		NSLog(@"Parsing...");
 		
 		BBParser *parser = [[BBParser alloc] init];
