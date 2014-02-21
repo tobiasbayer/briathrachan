@@ -14,21 +14,38 @@
  limitations under the License.
  */
 
+#import <MessageUI/MFMailComposeViewController.h>
 #import "BBInfoViewController.h"
 
-@interface BBInfoViewController ()
+@interface BBInfoViewController () <MFMailComposeViewControllerDelegate>
 
 @end
 
 @implementation BBInfoViewController
 
-- (IBAction)openLink:(id)sender {
+- (IBAction)openLink:(id)sender
+{
 	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.smo.uhi.ac.uk/gaidhlig/faclair/bb"]];
 }
 
 - (IBAction)dismissInfo:(id)sender
 {
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)sendFeedback:(id)sender
+{
+    MFMailComposeViewController *controller = [[MFMailComposeViewController alloc] init];
+	controller.mailComposeDelegate = self;
+	[controller setSubject:@"Briathrachan Feedback"];
+	[controller setToRecipients:[NSArray arrayWithObject:@"iphonesoftware@tobias-bayer.de"]];
+	[self presentViewController:controller animated:YES completion:nil];
+}
+
+#pragma mark - MFMailComposeViewControllerDelegate
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error {
+	[self becomeFirstResponder];
+	[self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
