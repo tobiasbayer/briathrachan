@@ -64,7 +64,8 @@
     [self parse];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
+- (void)viewDidAppear:(BOOL)animated
+{
     self.navigationController.navigationBarHidden = YES;
 }
 
@@ -89,7 +90,8 @@
 
 #pragma mark - Keyboard handling
 
-- (void)keyboardDidShow:(NSNotification *)notification {
+- (void)keyboardDidShow:(NSNotification *)notification
+{
     NSDictionary *info = [notification userInfo];
     NSValue *kbFrame = [info objectForKey:UIKeyboardFrameEndUserInfoKey];
     
@@ -109,7 +111,8 @@
     }];
 }
 
-- (void)keyboardWillHide:(NSNotification *)notification {
+- (void)keyboardWillHide:(NSNotification *)notification
+{
     NSDictionary *info = [notification userInfo];
     
     NSTimeInterval animationDuration = [[info objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
@@ -122,7 +125,8 @@
 }
 
 #pragma mark - File parsing
-- (void)parse {
+- (void)parse
+{
 	@autoreleasepool {
 		BBParser *parser = [[BBParser alloc] init];
 		_entries = [parser parse:[[NSBundle mainBundle] pathForResource:@"dictionary" ofType:@"txt"]];
@@ -139,7 +143,8 @@
 	}
 }
 
-- (void)buildIndex {
+- (void)buildIndex
+{
 	NSMutableArray *tempArray = [[NSMutableArray alloc] init];
 	[tempArray addObject:@"A"];
 	[tempArray addObject:@"B"];
@@ -165,7 +170,8 @@
 
 
 #pragma mark - Table View
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
 	if(_isSearching) {
 		return 1;
 	}
@@ -179,7 +185,8 @@
 	return [_index objectAtIndex:section];
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
 	if(_isSearching) {
 		return [_copiedEntries count];
 	}
@@ -189,7 +196,8 @@
 	}
 }
 
-- (UITableViewCell *)tableView:(UITableView *)aTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)aTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     UITableViewCell *cell = [aTableView dequeueReusableCellWithIdentifier:@"Cell"];
 	
 	BBWordEntry *entry = nil;
@@ -211,7 +219,8 @@
 
 #pragma mark - Searching
 
-- (NSRange)searchInTranslation:(NSString *)translation searchFor:(NSString *)searchText {
+- (NSRange)searchInTranslation:(NSString *)translation searchFor:(NSString *)searchText
+{
 	NSRange range = NSMakeRange(NSNotFound, 0);
 	NSArray *words = [translation componentsSeparatedByString:@" "];
 	for(NSString *string in words) {
@@ -224,7 +233,8 @@
 	return range;
 }
 
-- (void)searchTableView {
+- (void)searchTableView
+{
 	NSString *searchText = _searchBar.text;
 	
 	NSPredicate *predicate;
@@ -239,7 +249,8 @@
 	_copiedEntries = [_tempEntries filteredArrayUsingPredicate:predicate];
 }
 
-- (void)doneSearching {
+- (void)doneSearching
+{
     UIEdgeInsets tableInsets = UIEdgeInsetsMake(44, 0, 0, 0);
     _tableView.contentInset = tableInsets;
     _tableView.scrollIndicatorInsets = tableInsets;
@@ -256,7 +267,8 @@
 	[self.tableView reloadData];
 }
 
-- (void)scrollToTop:(id)sender {
+- (void)scrollToTop:(id)sender
+{
 	int reloadToRow = 0;
 	
 	NSUInteger indexArr[] = {0,reloadToRow};
@@ -268,7 +280,8 @@
 
 #pragma mark - Search Bar
 
-- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
+{
     UIEdgeInsets tableInsets = UIEdgeInsetsMake(88, 0, 0, 0);
     _tableView.contentInset = tableInsets;
     _tableView.scrollIndicatorInsets = tableInsets;
@@ -287,7 +300,8 @@
 	[self searchBar:searchBar textDidChange:searchBar.text];
 }
 
-- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
+{
 	if([searchText length] > 0) {
 		_isSearching = YES;
 		_maySelectRow = YES;
@@ -303,20 +317,24 @@
 	[self.tableView reloadData];
 }
 
-- (void)searchBar:(UISearchBar *)searchBar selectedScopeButtonIndexDidChange:(NSInteger)selectedScope {
+- (void)searchBar:(UISearchBar *)searchBar selectedScopeButtonIndexDidChange:(NSInteger)selectedScope
+{
 	[self searchTableView];
 	[_tableView reloadData];
 }
 
-- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
+{
 	[self doneSearching];
 }
 
-- (void)searchBarSearchButtonClicked:(UISearchBar *)theSearchBar {
+- (void)searchBarSearchButtonClicked:(UISearchBar *)theSearchBar
+{
 	[self doneSearching];
 }
 
-- (void)customizeSearchKeyboard {
+- (void)customizeSearchKeyboard
+{
     for(UIView *subView in [_searchBar subviews]) {
         for(UIView *subSubView in [subView subviews]) {
             if([subSubView conformsToProtocol:@protocol(UITextInputTraits)]) {
