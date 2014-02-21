@@ -16,6 +16,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BBMasterViewController : UITableViewController
+@interface BBMasterViewController : UIViewController
 
 @end

@@ -19,13 +19,15 @@
 #import "BBWordEntry.h"
 #import "BBParser.h"
 
-@interface BBMasterViewController ()
+@interface BBMasterViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) NSArray *index;
 @property (nonatomic, strong) NSDictionary *entries;
 @property (nonatomic, strong) NSMutableArray *tempEntries;
 
 @property (nonatomic, assign) BOOL isSearching;
+
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
 
 @end
 
@@ -36,6 +38,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+     _tableView.contentInset = UIEdgeInsetsMake(88, 0, 0, 0);
     [self buildIndex];
     [self parse];
 }
@@ -43,7 +46,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        NSIndexPath *indexPath = [_tableView indexPathForSelectedRow];
         
     }
 }
@@ -58,7 +61,7 @@
 		
 		[self buildIndex];
         
-		[self.tableView reloadData];
+		[_tableView reloadData];
 		
 		//[_spinner stopAnimating];
 		//_tabBar.selectedItem = [_tabBar.items objectAtIndex:0];
