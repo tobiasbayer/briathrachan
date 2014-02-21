@@ -19,15 +19,18 @@
 #import "BBWordEntry.h"
 #import "BBParser.h"
 
-@interface BBMasterViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface BBMasterViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
 @property (nonatomic, strong) NSArray *index;
 @property (nonatomic, strong) NSDictionary *entries;
 @property (nonatomic, strong) NSMutableArray *tempEntries;
+@property (nonatomic, strong) NSArray *copiedEntries;
 
+@property (nonatomic, assign) BOOL maySelectRow;
 @property (nonatomic, assign) BOOL isSearching;
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
+@property (nonatomic, weak) IBOutlet UISearchBar *searchBar;
 
 @end
 
@@ -54,7 +57,7 @@
         BBWordEntry *word = nil;
         
         if(_isSearching) {
-           // word = [_copyEntries objectAtIndex:indexPath.row];
+            word = [_copiedEntries objectAtIndex:indexPath.row];
         }
         else {
             NSString *indexString = [_index objectAtIndex:indexPath.section];
@@ -136,8 +139,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 	if(_isSearching) {
-		//return [copyEntries count];
-        return 1;
+		return [_copiedEntries count];
 	}
 	else {
 		NSString *key = [_index objectAtIndex:section];
@@ -155,7 +157,7 @@
 	
 	BBWordEntry *entry = nil;
 	if(_isSearching) {
-		//entry = [copyEntries objectAtIndex:indexPath.row];
+		entry = [_copiedEntries objectAtIndex:indexPath.row];
 	}
 	else {
 		NSString *key = [_index objectAtIndex:indexPath.section];
@@ -171,11 +173,98 @@
     return cell;
 }
 
-- (NSArray *)_isSearching:(UITableView *)tableView {
-	if(_isSearching)
-		return nil;
+#pragma mark - Searching
+
+- (NSRange)searchInTranslation:(NSString *)translation searchFor:(NSString *)searchText {
+	NSRange range = NSMakeRange(NSNotFound, 0);
+	NSArray *words = [translation componentsSeparatedByString:@" "];
+	for(NSString *string in words) {
+		range = [string rangeOfString:searchText options:NSCaseInsensitiveSearch];
+		if(range.location == 0) {
+			break;
+		}
+	}
 	
-	return _index;
+	return range;
+}
+
+- (void)searchTableView {
+	NSString *searchText = _searchBar.text;
+	
+	NSPredicate *predicate;
+	
+	if(_searchBar.selectedScopeButtonIndex == 0) {
+		predicate = [NSPredicate predicateWithFormat:@"originalForSearch BEGINSWITH[cd] %@ OR original BEGINSWITH[cd] %@", searchText, searchText];
+	}
+	else {
+		predicate = [NSPredicate predicateWithFormat:@"translation MATCHES %@", [NSString stringWithFormat:@"(^|.* )%@.*", searchText]];
+	}
+    
+	_copiedEntries = [_tempEntries filteredArrayUsingPredicate:predicate];
+}
+
+- (void)doneSearching {
+	_searchBar.text = @"";
+	[_searchBar resignFirstResponder];
+	
+	_maySelectRow = YES;
+	_isSearching = NO;
+	self.navigationItem.rightBarButtonItem = nil;
+	self.tableView.scrollEnabled = YES;
+	
+	[self.tableView reloadData];
+}
+
+- (void)scrollToTop:(id)sender {
+	int reloadToRow = 0;
+	
+	NSUInteger indexArr[] = {0,reloadToRow};
+	
+	if([self.tableView numberOfRowsInSection:0] > 0) {
+		[self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathWithIndexes:indexArr length:2] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+	}
+}
+
+#pragma mark - Search Bar
+
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)theSearchBar {
+	_isSearching = YES;
+	_maySelectRow = NO;
+	self.tableView.scrollEnabled = NO;
+	
+	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]
+                                              initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+                                              target:self action:@selector(doneSearching:)];
+	[self searchBar:theSearchBar textDidChange:theSearchBar.text];
+}
+
+- (void)searchBar:(UISearchBar *)theSearchBar textDidChange:(NSString *)searchText {
+	if([searchText length] > 0) {
+		_isSearching = YES;
+		_maySelectRow = YES;
+		self.tableView.scrollEnabled = YES;
+		[self searchTableView];
+	}
+	else {
+		_isSearching = NO;
+		_maySelectRow = NO;
+		self.tableView.scrollEnabled = NO;
+	}
+	
+	[self.tableView reloadData];
+}
+
+- (void)searchBar:(UISearchBar *)searchBar selectedScopeButtonIndexDidChange:(NSInteger)selectedScope {
+	[self searchTableView];
+	[_tableView reloadData];
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
+	[self doneSearching];
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)theSearchBar {
+	[self searchTableView];
 }
 
 @end

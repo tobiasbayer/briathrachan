@@ -72,12 +72,16 @@
                                     <string>English</string>
                                     <string>Gàidhlig</string>
                                 </scopeButtonTitles>
+                                <connections>
+                                    <outlet property="delegate" destination="ayt-Lj-Q3h" id="u3Q-qv-HZD"/>
+                                </connections>
                             </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Ifm-T3-i3l"/>
                     <connections>
+                        <outlet property="searchBar" destination="Laf-49-mkS" id="d4k-B0-Ljf"/>
                         <outlet property="tableView" destination="mLL-gJ-YKr" id="kZm-ZD-WUM"/>
                     </connections>
                 </viewController>
