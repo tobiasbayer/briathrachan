@@ -154,7 +154,7 @@ for providing an electronic version of the dictionary.
 http://www2.smo.uhi.ac.uk/gaidhlig/faclair/bb 
 for a web version of the dictionary.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.58039218187332153" blue="0.96862751245498657" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="Zx8-ys-1Q8" appends="YES" id="zqe-4t-TdN"/>
