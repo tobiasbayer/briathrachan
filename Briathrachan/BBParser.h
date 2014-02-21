@@ -16,9 +16,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface BBParser : NSObject {
-
-}
+@interface BBParser : NSObject
 
 - (NSDictionary *)parse:(NSString *)filename;
 

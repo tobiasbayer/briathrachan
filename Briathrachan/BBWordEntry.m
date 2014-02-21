@@ -18,9 +18,5 @@
 
 @implementation BBWordEntry
 
-@synthesize original;
-@synthesize translation;
-@synthesize originalForSearch;
-
 
 @end

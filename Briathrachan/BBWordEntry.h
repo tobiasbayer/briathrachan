@@ -16,16 +16,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface BBWordEntry : NSObject {
-	NSString *original;
-	NSString *translation;
-	NSString *originalForSearch;
-}
+@interface BBWordEntry : NSObject
 
-
-@property(nonatomic) NSString *original;
-@property(nonatomic) NSString *originalForSearch;
-@property(nonatomic) NSString *translation;
-
+@property (nonatomic, strong) NSString *original;
+@property (nonatomic) NSString *originalForSearch;
+@property (nonatomic) NSString *translation;
 
 @end
