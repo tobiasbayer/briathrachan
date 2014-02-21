@@ -58,20 +58,14 @@
     _tableView.contentInset = tableInsets;
     _tableView.scrollIndicatorInsets = tableInsets;
     
+    [self customizeSearchKeyboard];
+    
     [self buildIndex];
     [self parse];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     self.navigationController.navigationBarHidden = YES;
-    
-    for(UIView *subView in [_searchBar subviews]) {
-        for(UIView *subSubView in [subView subviews]) {
-            if([subSubView conformsToProtocol:@protocol(UITextInputTraits)]) {
-                [(UITextField *)subSubView setReturnKeyType:UIReturnKeyDone];
-            }
-        }
-    }
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -320,6 +314,16 @@
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)theSearchBar {
 	[self doneSearching];
+}
+
+- (void)customizeSearchKeyboard {
+    for(UIView *subView in [_searchBar subviews]) {
+        for(UIView *subSubView in [subView subviews]) {
+            if([subSubView conformsToProtocol:@protocol(UITextInputTraits)]) {
+                [(UITextField *)subSubView setReturnKeyType:UIReturnKeyDone];
+            }
+        }
+    }
 }
 
 @end
