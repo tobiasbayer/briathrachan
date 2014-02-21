@@ -54,7 +54,7 @@
 												 name:UIKeyboardWillHideNotification
 											   object:nil];
     
-    UIEdgeInsets tableInsets = UIEdgeInsetsMake(68, 0, 0, 0);
+    UIEdgeInsets tableInsets = UIEdgeInsetsMake(24, 0, 0, 0);
     _tableView.contentInset = tableInsets;
     _tableView.scrollIndicatorInsets = tableInsets;
     
@@ -248,6 +248,10 @@
 }
 
 - (void)doneSearching {
+    UIEdgeInsets tableInsets = UIEdgeInsetsMake(44, 0, 0, 0);
+    _tableView.contentInset = tableInsets;
+    _tableView.scrollIndicatorInsets = tableInsets;
+    _searchBar.showsScopeBar = NO;
     _searchBar.showsCancelButton = NO;
 	_searchBar.text = @"";
 	[_searchBar resignFirstResponder];
@@ -273,11 +277,18 @@
 #pragma mark - Search Bar
 
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
+    UIEdgeInsets tableInsets = UIEdgeInsetsMake(88, 0, 0, 0);
+    _tableView.contentInset = tableInsets;
+    _tableView.scrollIndicatorInsets = tableInsets;
+    searchBar.showsScopeBar = YES;
+    
     searchBar.showsCancelButton = YES;
 	_isSearching = YES;
 	_maySelectRow = NO;
-	self.tableView.scrollEnabled = NO;
 	
+    [_tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+	_tableView.scrollEnabled = NO;
+    
 	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]
                                               initWithBarButtonSystemItem:UIBarButtonSystemItemDone
                                               target:self action:@selector(doneSearching)];
