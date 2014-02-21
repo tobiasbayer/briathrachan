@@ -16,7 +16,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BBDetailViewController : UIViewController
+@interface BBWordDetailController : UIViewController
 
 @property (nonatomic, strong) id detailItem;
 @property (nonatomic, weak) IBOutlet UILabel *detailDescriptionLabel;

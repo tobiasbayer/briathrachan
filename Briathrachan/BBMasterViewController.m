@@ -15,7 +15,7 @@
  */
 
 #import "BBMasterViewController.h"
-#import "BBDetailViewController.h"
+#import "BBWordDetailController.h"
 #import "BBWordEntry.h"
 #import "BBParser.h"
 

@@ -85,10 +85,10 @@
             </objects>
             <point key="canvasLocation" x="451" y="64"/>
         </scene>
-        <!--Detail View Controller - Detail-->
+        <!--Word Detail Controller - Detail-->
         <scene sceneID="Cn3-H9-jdl">
             <objects>
-                <viewController title="Detail" id="Ah7-4n-0Wa" customClass="BBDetailViewController" sceneMemberID="viewController">
+                <viewController title="Detail" id="Ah7-4n-0Wa" customClass="BBWordDetailController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="V7P-3e-zVN"/>
                         <viewControllerLayoutGuide type="bottom" id="nhb-U8-zQo"/>

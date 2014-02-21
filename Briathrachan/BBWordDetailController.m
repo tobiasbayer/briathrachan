@@ -14,13 +14,13 @@
  limitations under the License.
  */
 
-#import "BBDetailViewController.h"
+#import "BBWordDetailController.h"
 
-@interface BBDetailViewController ()
+@interface BBWordDetailController ()
 
 @end
 
-@implementation BBDetailViewController
+@implementation BBWordDetailController
 
 #pragma mark - Managing the detail item
 
