@@ -159,7 +159,6 @@
 		entry = [[_entries objectForKey:key] objectAtIndex:indexPath.row];
 	}
 	
-	
 	cell.textLabel.text = entry.original;
 	cell.detailTextLabel.text = entry.translation;
     
@@ -229,7 +228,7 @@
 	
 	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]
                                               initWithBarButtonSystemItem:UIBarButtonSystemItemDone
-                                              target:self action:@selector(doneSearching:)];
+                                              target:self action:@selector(doneSearching)];
 	[self searchBar:theSearchBar textDidChange:theSearchBar.text];
 }
 
