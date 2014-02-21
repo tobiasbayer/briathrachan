@@ -22,6 +22,9 @@
 		5D4079E618B65FF900382B97 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D4079C518B65FF900382B97 /* UIKit.framework */; };
 		5D4079EE18B65FF900382B97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5D4079EC18B65FF900382B97 /* InfoPlist.strings */; };
 		5D4079F018B65FF900382B97 /* BriathrachanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4079EF18B65FF900382B97 /* BriathrachanTests.m */; };
+		5D4079FD18B660AE00382B97 /* WordEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4079FA18B660AE00382B97 /* WordEntry.m */; };
+		5D4079FE18B660AE00382B97 /* BBParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4079FC18B660AE00382B97 /* BBParser.m */; };
+		5D407A0018B660F400382B97 /* bb-codes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5D4079FF18B660F400382B97 /* bb-codes.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,11 @@
 		5D4079EB18B65FF900382B97 /* BriathrachanTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BriathrachanTests-Info.plist"; sourceTree = "<group>"; };
 		5D4079ED18B65FF900382B97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5D4079EF18B65FF900382B97 /* BriathrachanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BriathrachanTests.m; sourceTree = "<group>"; };
+		5D4079F918B660AE00382B97 /* WordEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordEntry.h; sourceTree = "<group>"; };
+		5D4079FA18B660AE00382B97 /* WordEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordEntry.m; sourceTree = "<group>"; };
+		5D4079FB18B660AE00382B97 /* BBParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBParser.h; sourceTree = "<group>"; };
+		5D4079FC18B660AE00382B97 /* BBParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBParser.m; sourceTree = "<group>"; };
+		5D4079FF18B660F400382B97 /* bb-codes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "bb-codes.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +123,10 @@
 		5D4079C718B65FF900382B97 /* Briathrachan */ = {
 			isa = PBXGroup;
 			children = (
+				5D4079F918B660AE00382B97 /* WordEntry.h */,
+				5D4079FA18B660AE00382B97 /* WordEntry.m */,
+				5D4079FB18B660AE00382B97 /* BBParser.h */,
+				5D4079FC18B660AE00382B97 /* BBParser.m */,
 				5D4079D018B65FF900382B97 /* TBAppDelegate.h */,
 				5D4079D118B65FF900382B97 /* TBAppDelegate.m */,
 				5D4079D318B65FF900382B97 /* Main.storyboard */,
@@ -131,6 +143,7 @@
 		5D4079C818B65FF900382B97 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5D4079FF18B660F400382B97 /* bb-codes.txt */,
 				5D4079C918B65FF900382B97 /* Briathrachan-Info.plist */,
 				5D4079CA18B65FF900382B97 /* InfoPlist.strings */,
 				5D4079CD18B65FF900382B97 /* main.m */,
@@ -235,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D4079DD18B65FF900382B97 /* Images.xcassets in Resources */,
+				5D407A0018B660F400382B97 /* bb-codes.txt in Resources */,
 				5D4079CC18B65FF900382B97 /* InfoPlist.strings in Resources */,
 				5D4079D518B65FF900382B97 /* Main.storyboard in Resources */,
 			);
@@ -255,7 +269,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D4079FE18B660AE00382B97 /* BBParser.m in Sources */,
 				5D4079D218B65FF900382B97 /* TBAppDelegate.m in Sources */,
+				5D4079FD18B660AE00382B97 /* WordEntry.m in Sources */,
 				5D4079D818B65FF900382B97 /* TBMasterViewController.m in Sources */,
 				5D4079CE18B65FF900382B97 /* main.m in Sources */,
 				5D4079DB18B65FF900382B97 /* TBDetailViewController.m in Sources */,
