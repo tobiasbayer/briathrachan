@@ -19,7 +19,8 @@
 
 @implementation BBParser
 
-- (NSString *)searchableString:(NSString *)string {
+- (NSString *)searchableString:(NSString *)string
+{
 	NSString *result = [string stringByReplacingOccurrencesOfString:@"ò" withString:@"o"];
 	result = [result stringByReplacingOccurrencesOfString:@"ó" withString:@"o"];
 	result = [result stringByReplacingOccurrencesOfString:@"ì" withString:@"i"];
@@ -45,7 +46,8 @@
 	return result;
 }
 
-- (NSDictionary *)parse:(NSString *)filename {
+- (NSDictionary *)parse:(NSString *)filename
+{
 	NSString *filecontent = [NSString stringWithContentsOfFile:filename encoding:NSUTF8StringEncoding error:nil];
 	NSArray *lines = [filecontent componentsSeparatedByString:@"\n"];
 	

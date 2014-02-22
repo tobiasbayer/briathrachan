@@ -17,7 +17,8 @@ limitations under the License.
 #import <Foundation/Foundation.h>
 
 
-@interface TBTopLeftAlignedLabel : UILabel {
+@interface TBTopLeftAlignedLabel : UILabel
+{
 
 }
 
