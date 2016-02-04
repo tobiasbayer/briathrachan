@@ -251,7 +251,7 @@
 		predicate = [NSPredicate predicateWithFormat:@"originalForSearch BEGINSWITH[cd] %@ OR original BEGINSWITH[cd] %@", searchText, searchText];
 	}
 	else {
-		predicate = [NSPredicate predicateWithFormat:@"translation MATCHES %@", [NSString stringWithFormat:@"(^|.* )%@.*", searchText]];
+		predicate = [NSPredicate predicateWithFormat:@"translation contains[cd] %@", searchText];
 	}
     
 	_copiedEntries = [_tempEntries filteredArrayUsingPredicate:predicate];
