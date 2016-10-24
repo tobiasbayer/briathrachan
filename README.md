@@ -1,7 +1,7 @@
 Briathrachan
 ============
 
-This is the source code to Briathrachan, a Gaelic-English dictionary app for iOS (http://itunes.apple.com/de/app/briathrachan/id393502125?mt=8).
+This is the source code to Briathrachan, a Gaelic-English dictionary app for iOS.
 
 This dictionary is based on 
 MacFarlane's (Scottish-)Gaelic-English dictionary "Am Briathrachan Beag". 
